@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <link href='styleT.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Log In</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="un">Select Package:</label>
+<select>
+      <?php
+
+$conn = mysqli_connect("localhost", "root", "", "webtech");
+$result = mysqli_query($conn, "SELECT * FROM  guide_details");
+ "SELECT name FROM guide_details GROUP BY name ORDER BY name ASC";
+while($row = mysqli_fetch_array($result))
+{
+ $Gname .= '<option value="'.$row["name"].'">'.$row["name"].'</option>';
+}
+
+  ?>
+
+
+    <div class="form-group">
+      <label for="pwd">Select Guide:</label>
+      <select name="country" id="country" class="form-control action">
+    <option value="">Select Guide</option>
+    <?php echo $Gname; ?>
+   </select>
+
+    </div>
+
+    <div class="form-group">
+      <label for="un">Tocken Number:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter User Name" name="un">
+    </div>
+   <p>Collect the tocken number and conform the tour in payment section.</p>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

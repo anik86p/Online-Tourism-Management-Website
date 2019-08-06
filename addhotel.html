@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Hotel Details</title>
+  <meta charset="utf-8">
+  <!--<script type="text/javascript">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<script>
+
+  function hotel(){
+  flag=true;
+  
+    var h0=document.getElementById("h").value;
+    var h1=document.getElementById("lo").value;
+    var h2=document.getElementById("a").value;
+    var h3=document.getElementById("p").value;
+    var h4=document.getElementById("r").value;
+    
+    document.getElementById("msg").innerHTML="";
+    document.getElementById("msg1").innerHTML="";
+    document.getElementById("msg2").innerHTML="";
+    document.getElementById("msg3").innerHTML="";
+    document.getElementById("msg4").innerHTML="";
+    
+    if(h0.length==0){
+      document.getElementById("msg").innerHTML="Enter Hotel Name Min !!";
+      flag=false;
+    }
+    
+    if(h1.length==0){
+      document.getElementById("msg1").innerHTML="Enter location!";
+      flag=false;
+    }
+    
+    if(h2.length<6){
+      document.getElementById("msg2").innerHTML="Give  address(Min 6 charec)!";
+      flag=false;
+    }
+    
+    var num = /^[0-9]+$/;
+    if(!h3.match(num)){
+      document.getElementById("msg3").innerHTML="Enter Phone Number(only integer)";
+      flag=false;
+    }
+    
+    var numm = /^[0-9]+$/;
+    if(!h4.match(numm)){
+      document.getElementById("msg4").innerHTML="Rent range";
+      flag=false;
+    }
+  return flag;
+  }
+
+</script>
+
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Add New Hotel</h2>
+  <form action="addhotel.php" method="post" enctype="multipart/form-data" onsubmit="return hotel()" method="post">
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return hotel()" class="form-control" id="h" placeholder="Enter Hotel Name" name="hname"><span id="msg"></span>
+    </div>
+    <div class="form-group">
+      <label for="pwd"></label>
+      <input type="text" onkeyup="return hotel()" class="form-control" id="lo" placeholder="Enter location[city name]" name="location"><span id="msg1"></span>
+    </div>
+
+ <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return hotel()" class="form-control" id="a" placeholder="Enter Details Address" name="add"><span id="msg2"></span>
+    </div>
+<div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return hotel()" class="form-control" id="p" placeholder="Enter Phone Number" name="phn"><span id="msg3"></span>
+    </div>
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return hotel()" class="form-control" id="r" placeholder="Rent Range[x-y]" name="rent"><span id="msg4"></span>
+    </div>
+<br>
+
+<h4>AC Facility</h4>
+<select name="ac">
+
+  <option value="Y">YES</option>
+  <option value="N">NO</option>
+  
+</select>
+<div class="form-group">
+      <label for="pwd">Upload A Photo:</label>
+    
+      <input type="file" name="pic" id="pic" >
+
+</div>
+
+
+
+    <button type="submit" onsubmit="return hotel()" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

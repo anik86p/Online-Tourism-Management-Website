@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <link href='styleT.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<?php
+session_start();
+$conn = mysqli_connect("localhost", "root", "", "webtech");
+$row = mysqli_query($conn, "UPDATE tourist_reg SET name = ' ' WHERE uname = '$_SESSION["UNAME"]'");
+   $result = mysqli_fetch_array($row);
+
+    
+
+  ?>
+
+
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Update Info</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="un"> Past Info:</label>
+      <input type="text" class="form-control" id="un"  name="un">
+    </div>
+    <div class="form-group">
+      <label for="un"> New Info:</label>
+      <input type="text" class="form-control" id="n"  name="n">
+    </div>
+    
+    <button type="Update" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

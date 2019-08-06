@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+// xmlhttp = new XMLHttpRequest();
+function showHint() {
+	var  xmlhttp = new XMLHttpRequest();
+	var str=document.getElementById('mytext').value;	
+	//document.getElementById("spinner").style.visibility= "visible";
+	xmlhttp.onreadystatechange = function() {
+		//alert(xmlhttp.rxmlhttpeadyState);
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {			
+			//document.getElementById("spinner").style.visibility= "hidden";
+			var m=document.getElementById("txtHint");
+			m.innerHTML=xmlhttp.responseText;;
+		}
+	};
+ 	var url="server.php?uname="+str;
+	//alert(url);
+	xmlhttp.open("GET", url,true);
+	xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+Your ID : <input type="text" onkeyup="showHint()" id="mytext" name="uname" > <img id="spinner" src="loading.gif" width="20px" height="20px" style="visibility:hidden">
+Your Pass : <input type="password"  id="mytext2" onkeyup="" >
+<p id="txtHint" style="border:1px solid red;"></p>
+<br/>
+<input type="button" value="show" onclick="showHint()">
+<input type="button" value="Hide" onclick="">
+</body>
+</html>

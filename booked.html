@@ -1,0 +1,39 @@
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "webtech");
+$result = mysqli_query($conn, "SELECT * FROM  guide_details");
+
+
+	while ($row = mysqli_fetch_array($result)) {
+		
+	
+	?>
+	<form >
+    Tocken number:<br>
+  <input type="text" name="firstname" value="<?php echo $row['name']; ?>">
+  <br>
+  Package Name:<br>
+  <input type="text" name="firstname" value="<?php echo $row['name']; ?>">
+  <br>
+  Guide Age:<br>
+  <input type="text" name="lastname" value="<?php echo $row['age']; ?>">
+  <br>
+
+  Guide Phone Address:<br>
+  <input type="text" name="firstname" value="<?php echo $row['phone']; ?>">
+  <br>
+  Approve ?:<br>
+  <select name="ap">
+
+  <option value="Y">YES</option>
+  <option value="N">NO</option>
+  
+</select>
+  
+</form> 
+		
+	
+	<?php
+}
+	?>
+	

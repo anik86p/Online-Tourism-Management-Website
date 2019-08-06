@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Guide Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<script>
+
+  function pack(){
+  flag=true;
+  
+     var pp=document.getElementById("g").value;
+     var pp1=document.getElementById("location").value;
+     var pp2=document.getElementById("phnn").value;
+     var pp3=document.getElementById("cost").value;
+     
+    document.getElementById("msg").innerHTML="";
+    document.getElementById("msg1").innerHTML="";
+    document.getElementById("msg2").innerHTML="";
+    document.getElementById("msg3").innerHTML="";
+
+    var a= /^[A-Za-z]+$/;
+    if(pp.length==0 || !pp.match(a))
+    {
+      document.getElementById("msg").innerHTML="Please enter a package name!!";
+      flag=false;
+    }
+    
+    var b = /^[A-Za-z]+$/;
+    if(pp1.length==0 || !pp1.match(b))
+    {
+      document.getElementById("msg1").innerHTML="Please Enter a Location!!";
+      flag=false;
+    }
+    
+   
+    if(pp2.length<15){
+      document.getElementById("msg2").innerHTML="Please give your Details[min 15 charecter]!!";
+      flag=false;
+    }
+    var numbers = /^[0-9]+$/;
+    if(!pp3.match(numbers)){
+      document.getElementById("msg3").innerHTML="Please input cost expense in numbers!!";
+      flag=false;
+    }
+    return flag;
+  
+  }
+
+</script>
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Add New Package</h2>
+  <form action="addpackage.php" onsubmit="return pack()" method="post">
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return pack()" class="form-control" id="g" placeholder="Enter Package Name" name="gname"><span id="msg"></span>
+    </div>
+    <div class="form-group">
+      <label for="pwd"></label>
+      <input type="text" onkeyup="return pack()" class="form-control" id="location" placeholder="Enter Location" name="age"><span id="msg1"></span>
+    </div>
+
+ <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return pack()" class="form-control" id="phnn" placeholder="Enter Details" name="Phnn"><span id="msg2"></span>
+    </div>
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return pack()" class="form-control" id="cost" placeholder="Enter Cost" name="Cost"><span id="msg3"></span>
+    </div>
+   
+
+
+<div class="form-group">
+      <label for="pwd">Upload A Photo:</label>
+    
+      <input type="file" name="pic" accept="image/*">
+ 
+</div>
+
+    <button type="submit" onsubmit="return pack()" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

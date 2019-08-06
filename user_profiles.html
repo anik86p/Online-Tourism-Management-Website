@@ -1,0 +1,41 @@
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "webtech");
+$result = mysqli_query($conn, "SELECT * FROM  tourist_reg");
+
+
+	while ($row = mysqli_fetch_array($result)) {
+		
+	
+	?>
+	<form >
+  Name:<br>
+  <input type="text" name="firstname" value="<?php echo $row['name']; ?>">
+  <br>
+  User Name:<br>
+  <input type="text" name="lastname" value="<?php echo $row['uname']; ?>">
+  <br>
+
+  Email:<br>
+  <input type="text" name="firstname" value="<?php echo $row['email']; ?>">
+  <br>
+  Phone Number:<br>
+  <input type="text" name="firstname" value="<?php echo $row['phn_num']; ?>">
+  <br>
+  Address:<br>
+  <input type="text" name="firstname" value="<?php echo $row['address']; ?>">
+  <br>
+  City:<br>
+  <input type="text" name="firstname" value="<?php echo $row['city']; ?>">
+  <br>
+  country:<br>
+  <input type="text" name="firstname" value="<?php echo $row['country']; ?>">
+  <br>
+  
+</form> 
+		
+	
+	<?php
+}
+	?>
+	

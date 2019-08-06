@@ -1,0 +1,29 @@
+
+body
+{
+	background: url('bd11.jpg');
+	 position:fixed;
+
+}
+.container
+{
+	  
+	  
+	  width:250px;
+    height: 300px;
+    margin-left: 200px;
+}
+
+.login{
+	
+	
+	margin-left: 456px;
+	margin-top: 200px;
+	margin-right: 200px;
+
+}
+.form-group
+{
+	width:350px;
+	color: white;
+}

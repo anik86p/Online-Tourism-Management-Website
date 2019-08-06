@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <link href='styleT.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<script>
+  function login(){
+  flag=true;
+
+  var l=document.getElementById("email").value;
+  var p=document.getElementById("pwd").value;
+  
+  document.getElementById("msg").innerHTML="";
+  document.getElementById("msg1").innerHTML="";
+  
+  if(l.length<6){
+  document.getElementById("msg").innerHTML="must be at least 6 charecters";
+  flag=false;
+  }
+  
+
+  if(p.length <6 ){
+  document.getElementById("msg1").innerHTML="must be at least 6 characters";
+  flag=false;
+  }
+  return flag;
+}
+</script>
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Log In</h2>
+  <form action="Tlogin.php" onsubmit="return login()" method="post">
+    <div class="form-group">
+      <label for="un">User Name:</label>
+      <input type="text" onkeyup="return login()" class="form-control" id="email" placeholder="Enter User Name" name="un"><span id="msg"></span>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" onkeyup="return login()" class="form-control" id="pwd" placeholder="Enter password" name="pwd"><span id="msg1"></span>
+    </div>
+    <div class="checkbox">
+      <label class="form-group"><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" onsubmit="return login()" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>

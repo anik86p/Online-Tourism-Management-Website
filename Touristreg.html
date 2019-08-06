@@ -1,0 +1,172 @@
+<?php ob_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title >Create Your Own Account</title>
+  <meta charset="utf-8">
+  <link href='regT.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<script>
+function validform()
+{
+
+var  xmlhttp = new XMLHttpRequest();
+  var str=document.getElementById('uname').value;  
+  //document.getElementById("spinner").style.visibility= "visible";
+  xmlhttp.onreadystatechange = function() {
+    //alert(xmlhttp.rxmlhttpeadyState);
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {     
+      //document.getElementById("spinner").style.visibility= "hidden";
+      var m=document.getElementById("txtHint");
+      m.innerHTML=xmlhttp.responseText;
+    }
+  };
+  var url="server.php?uname="+str;
+  //alert(url);
+  xmlhttp.open("GET", url,true);
+  xmlhttp.send();
+
+
+
+flag=true;
+
+   var x=document.getElementById("Name");
+var x1=document.getElementById("uname");
+var x2=document.getElementById("pwd");
+var x3=document.getElementById("pwd1");
+var x4=document.getElementById("email");
+var x5=document.getElementById("phn");
+var x6=document.getElementById("add");
+var x7=document.getElementById("city");
+var x8=document.getElementById("country");
+document.getElementById("msg").innerHTML="";
+document.getElementById("p").innerHTML="";
+document.getElementById("msg22").innerHTML="";
+document.getElementById("msgp").innerHTML="";
+document.getElementById("msgemail").innerHTML="";
+document.getElementById("msgphn").innerHTML="";
+document.getElementById("msgadd").innerHTML="";
+document.getElementById("msgcity").innerHTML="";
+document.getElementById("msgcountry").innerHTML="";
+
+if(x.value.length<5)
+  {
+document.getElementById("msg").innerHTML="must be at least 5 charecter";
+flag=false;
+  }
+  if(x1.value.length<6)
+  {
+document.getElementById("msg22").innerHTML="must be at least 6 charecter";
+flag=false;
+  }
+  if(x2.value.length<6)
+  {
+document.getElementById("p").innerHTML=" Password must be at least 6 charecter";
+flag=false;
+  }
+  if(x2.value!=x3.value )
+  {
+document.getElementById("msgp").innerHTML="Password does not Match";
+flag=false;
+  }
+   var reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  if(!reg.test(x4.value))
+  {
+document.getElementById("msgemail").innerHTML="Enter a Valid Email";
+flag=false;
+  }
+  var numbers = /^[0-9]+$/;
+  if(!x5.value.match(numbers))
+  {
+document.getElementById("msgphn").innerHTML="Phn Number Doesnot Contain Any Characture";
+flag=false;
+  }
+  
+  if(x6.value.length<10)
+  {
+document.getElementById("msgadd").innerHTML="Please provide your address";
+flag=false;
+  }
+  if(x7.value.length<10)
+  {
+document.getElementById("msgcity").innerHTML="Type a city";
+flag=false;
+  }
+  if(x8.value.length<10)
+  {
+document.getElementById("msgcountry").innerHTML="type a country";
+flag=false;
+  }   
+  return flag;
+}
+</script>
+
+
+<body >
+
+<div class="x">
+<div class="container">
+  <h2 class="n2">Create Your Own Account</h2>
+ <form name="TR" action="Touristreg.php" onsubmit="return validform()" method="post">
+
+    <div class="form-group">
+      <label for="Name" class="n">Name:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="Name" placeholder="Enter Full Name" name="name" /><span id="msg" ></span>
+    </div>
+    
+
+     <div class="form-group">
+      <label for="uname" class="n">User Name:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="uname" placeholder="Enter User Name" name="uname"/><span id="msg22" ></span>
+      <p id="txtHint" style="border:1px solid red;"></p>
+    </div>
+    <div class="form-group">
+      <label for="pwd" class="n">Password:</label>
+      <input onkeyup="return validform()" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd"/><span id="p" ></span>
+    <div class="form-group">
+      <label for="pwd" class="n">Conform Passwor:</label>
+      <input onkeyup="return validform()" type="password" class="form-control" id="pwd1" placeholder="Conform Password" name="pwd1"/><span id="msgp" ></span>
+    </div>
+     <div class="form-group">
+      <label for="email" class="n">Email:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="email" placeholder="Enter email" name="email"/><span id="msgemail" ></span>
+    </div>
+     <div class="form-group">
+      <label for="phn" class="n">Phn Number:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="phn" placeholder="Enter Phone Number" name="phn"/><span id="msgphn" ></span>
+    </div>
+    
+     <div class="form-group">
+      <label for="add" class="n">Residential Address:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="add" placeholder="Residential Address" name="add"/><span id="msgadd" ></span>
+    </div>
+     <div class="form-group">
+      <label for="city" class="n">City:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="city" placeholder="Enter city" name="city"/><span id="msgcity" ></span>
+    </div>
+
+    <div class="form-group">
+      <label for="country" class="n">Country:</label>
+      <input onkeyup="return validform()" type="text" class="form-control" id="country" placeholder="Enter Country" name="country"/><span id="msgcountry" ></span>
+    </div>
+
+    <h4>Sex</h4>
+<select id = "g" name="gender">
+
+  <option value="M">Male</option>
+  <option value="F">Female</option>
+  
+</select>
+    <br>
+    <br>
+    <button type="submit" onsubmit="return validform()" class="btn-btn-default">Submit</button>
+  </form>
+</div>
+</div>
+
+</body>
+</html>

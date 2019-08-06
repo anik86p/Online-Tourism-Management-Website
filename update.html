@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$conn = mysqli_connect("localhost", "root", "", "webtech");
+$row = mysqli_query($conn, "SELECT * FROM  tourist_reg where uname='anik86p'");
+   $result = mysqli_fetch_array($row);
+
+     $x=$result['name'];
+     $x1=$result['uname'];
+    
+
+  ?>
+
+
+
+
+<script>
+function validform()
+{
+  
+var y=document.getElementById("Name");
+var y1=document.getElementById("uname");
+
+if(y.value==$x1)
+  {
+alert("I am an alert box!");
+  }
+
+    
+  return false;
+}
+</script>
+
+
+
+
+<form onsubmit="return validform()">
+  First name:<br>
+  <input type="text" name="firstname" id="Name">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" id="uname">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>

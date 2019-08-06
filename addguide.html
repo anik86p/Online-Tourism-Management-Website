@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Guide Details</title>
+  <meta charset="utf-8">
+  <!--<script type="text/javascript">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+<script>
+
+  function guide(){
+  flag=true;
+  
+    var gu=document.getElementById("pname").value;
+    var gu1=document.getElementById("location").value;
+    var gu2=document.getElementById("detail").value;
+    var gu3=document.getElementById("cost").value;
+    
+    document.getElementById("msg").innerHTML="";
+    document.getElementById("msg1").innerHTML="";
+    document.getElementById("msg2").innerHTML="";
+    document.getElementById("msg3").innerHTML="";
+    
+    var a=/[A-Za-z]+$/;
+    if(gu.length<6 || !gu.match(a)){
+      document.getElementById("msg").innerHTML="Enter Package Name";
+      flag=false;
+    }
+    
+    var b=/[A-Za-z]+$/;
+    if(gu1.length<6 || !gu1.match(b)){
+      document.getElementById("msg1").innerHTML="Enter a location";
+      flag=false;
+    }
+    
+    var c=/[A-Za-z]+$/;
+    if(gu2.length<15 || !gu2.match(c)){
+      document.getElementById("msg2").innerHTML="Give some details";
+      flag=false;
+    }
+    
+    var num = /^[0-9]+$/;
+    if(!gu3.match(num)){
+      document.getElementById("msg3").innerHTML="Please mention cost range!!";
+      flag=false;
+    }
+    return flag;
+  
+  }
+
+</script>
+</head>
+<body>
+
+<div class="login">
+<div class="container">
+  <h2 class="form-group">Add New Guide</h2>
+  <form name="TR" action="addguide1.php" onsubmit="return guide()" method="post">
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return guide()" class="form-control" id="pname" placeholder="Enter Package Name" name="pname"><span id="msg"></span>
+    </div>
+    <div class="form-group">
+      <label for="pwd"></label>
+      <input type="text" onkeyup="return guide()" class="form-control" id="location" placeholder="Enter Location" name="age"><span id="msg1"></span>
+    </div>
+
+ <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return guide()" class="form-control" id="detail" placeholder="Enter Details" name="Phnn"><span id="msg2"></span>
+    </div>
+    <div class="form-group">
+      <label for="un"></label>
+      <input type="text" onkeyup="return guide()" class="form-control" id="cost" placeholder="Enter Cost" name="Cost"><span id="msg3"></span>
+    </div>
+   
+
+
+<div class="form-group">
+      <label for="pic">Upload A Photo:</label>
+    
+      <input type="file" name="pic" accept="image/*">
+  
+</div>
+
+
+    <button type="submit" onsubmit="return guide()" onclick="return guide()"class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+</body>
+</html>
+    
+
+ 
