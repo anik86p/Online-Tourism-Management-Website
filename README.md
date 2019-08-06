@@ -1,15 +1,13 @@
 # Hospital-Management-System
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-     content="width=device-width, initial-scale=1, user-scalable=yes">
- 
-  <title>Hello World!</title>
+<title>Page Title</title>
 </head>
 <body>
-Hello World!
- 
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
 </body>
 </html>
