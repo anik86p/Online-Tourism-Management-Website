@@ -8,5 +8,6 @@
   <p>PHP,JavaScript,JSON,AJAX,SQL,HTML,CSS</p>
 <h3>Development Environment </h3>
   <p>Sublime Text,NotePad++</p>
+  <img src="https://i.imgur.com/ly80jrz.png" width="800" height="600">
 </body>
 </html>
