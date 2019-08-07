@@ -15,5 +15,7 @@
   <img src="https://i.imgur.com/ML2TYfL.png" width="600" height="400">
   <p>Create Account</p>
   <img src="https://i.imgur.com/n7eZrFz.png" width="600" height="400">
+  <p>Create Account</p>
+  <img src="https://i.imgur.com/xGatnby.png" width="600" height="400">
 </body>
 </html>
