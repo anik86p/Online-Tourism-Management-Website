@@ -8,14 +8,15 @@
   <p>PHP,JavaScript,JSON,AJAX,SQL,HTML,CSS</p>
 <h3>Development Environment </h3>
   <p>Sublime Text,NotePad++</p>
+  <p>This is Home Page of The Website </p>
   <img src="https://i.imgur.com/ly80jrz.png" width="600" height="400">
-  <p>User Interface</p>
+  <p>New User Can Create Account</p>
   <img src="https://i.imgur.com/7rNm6FO.png" width="600" height="400">
-  <p>Admin Interface</p>
+  <p>Admin Can Log In In Order To Maintain The Website</p>
   <img src="https://i.imgur.com/ML2TYfL.png" width="600" height="400">
-  <p>Create Account</p>
+  <p>Payment Option Is Available For User</p>
   <img src="https://i.imgur.com/n7eZrFz.png" width="600" height="400">
-  <p>Create Account</p>
+  <p>User Can Share Their Experience</p>
   <img src="https://i.imgur.com/xGatnby.png" width="600" height="400">
 </body>
 </html>
