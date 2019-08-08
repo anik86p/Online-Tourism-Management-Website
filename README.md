@@ -1,4 +1,4 @@
-# Online-Tourism-Management-Websitr
+# Online-Tourism-Management-Website
 <!DOCTYPE html>
 <html>
 <body>
