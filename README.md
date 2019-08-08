@@ -3,7 +3,8 @@
 <html>
 <body>
 <h3>Description</h3>
-<p>This website is mainly designed for tourist.By using this website people can find out new place with new guyde and hotel and admin can maintain this website by accepting new menmer requested and delete older details also other details.</p>
+<p>This website mainly designed for new and existing tourist. Tourist can find news about the new place, local guide, hotel, food and many more in a specific area where they want to visit. They can hire a guide and booked a hotel by using this website and a secure payment option is also available . Every tourist can share their experience which influences another tourist about the place.
+On the other hand, admin can approve user and guide account opening request and add hotel details. Admin is also able to remove any content from the website..</p>
 <h3>Language Used</h3>
   <ul>
   <li>PHP</li>
