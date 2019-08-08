@@ -5,9 +5,17 @@
 <h3>Description</h3>
 <p>This website is mainly designed for tourist.By using this website people can find out new place with new guyde and hotel and admin can maintain this website by accepting new menmer requested and delete older details also other details.</p>
 <h3>Language Used</h3>
-  <p>PHP,JavaScript,JSON,AJAX,SQL,HTML,CSS</p>
+  <ul>
+  <li>PHP</li>
+  <li>JavaScript</li>
+  <li>JSON</li>
+     <li>AJAX</li>
+     <li>SQL</li>
+     <li>HTML</li>
+     <li>CSS</li>
+</ul> 
 <h3>Development Environment </h3>
-  <p>Sublime Text,NotePad++</p>
+  <p>Sublime Text</p>
   <p>This is Home Page of The Website </p>
   <img src="https://i.imgur.com/ly80jrz.png" width="600" height="400">
   <p>New User Can Create Account</p>
