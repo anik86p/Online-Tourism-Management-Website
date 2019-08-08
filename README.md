@@ -16,15 +16,15 @@
 </ul> 
 <h3>Development Environment </h3>
   <p>Sublime Text</p>
-  <ul>This is Home Page of The Website </ul> 
+  <p>This is Home Page of The Website </p> 
   <img src="https://i.imgur.com/ly80jrz.png" width="600" height="400">
-  <ul>New User Can Create Account</ul> 
+ <p>New User Can Create Account</p> 
   <img src="https://i.imgur.com/7rNm6FO.png" width="600" height="400">
-  <ul>Admin Can Log In In Order To Maintain The Website</ul> >
+  <p>Admin Can Log In In Order To Maintain The Website</p>
   <img src="https://i.imgur.com/ML2TYfL.png" width="600" height="400">
-  <ul>Payment Option Is Available For User</ul> 
+  <p>Payment Option Is Available For User</p>
   <img src="https://i.imgur.com/n7eZrFz.png" width="600" height="400">
-  <ul>User Can Share Their Experience</ul> 
+ <p>User Can Share Their Experience</p>
   <img src="https://i.imgur.com/xGatnby.png" width="600" height="400">
 </body>
 </html>
