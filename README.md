@@ -4,7 +4,7 @@
 <body>
 <h3>Description</h3>
 <p>This website mainly designed for new and existing tourist. Tourist can find news about the new place, local guide, hotel, food and many more in a specific area where they want to visit. They can hire a guide and booked a hotel by using this website and a secure payment option is also available . Every tourist can share their experience which influences another tourist about the place.
-On the other hand, admin can approve user and guide account opening request and add hotel details. Admin is also able to remove any content from the website..</p>
+On the other hand, admin can approve user and guide account opening request and add hotel details. Admin is also able to remove any content from the website.</p>
 <h3>Language Used</h3>
   <ul>
   <li>PHP</li>
